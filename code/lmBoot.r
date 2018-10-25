@@ -25,3 +25,15 @@ lmBoot <- function(inputData, nBoot){
   bootResults
   
 }
+
+# test efficiency of original function
+
+# Test 1 - 50 obs. 5000 iteration
+test1 <- data.frame(x = mtcars$hp, y = mtcars$mpg)
+time1 <- system.time(lmBoot(test1, 5000))
+
+# Test 2 - 84 obs. 5000 iteration
+test2 <- data.frame(x = CO2$conc, y = CO2$uptake)
+time2 <- system.time(lmBoot(test2, 5000))
+
+
