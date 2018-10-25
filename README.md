@@ -1,7 +1,6 @@
-![](https://raw.githubusercontent.com/ladychili/MT5763-Project-2/master/r-packages.png?token=AaldBeYwHauQ1p-x4kRfKTNPYLxc-3Q2ks5b2xckwA%3D%3D)
-
-
 # MT5763 Project 2 - Bootstrap Optimization
+
+![](https://raw.githubusercontent.com/ladychili/MT5763-Project-2/master/r-packages.png?token=AaldBeYwHauQ1p-x4kRfKTNPYLxc-3Q2ks5b2xckwA%3D%3D)
 
 EI Topo Members:
 
