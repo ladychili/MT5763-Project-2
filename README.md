@@ -6,7 +6,7 @@ EI Topo Members:
 
 - Qingting Zheng, 180024570
 
-- Member
+- Man-ho, SUEN, 180026297
 
 - Member
 
