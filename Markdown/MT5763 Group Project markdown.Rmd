@@ -1,5 +1,6 @@
 ---
 title: "MT5763 Group Project"
+author: "El Topo"
 output:
   html_notebook:
     number_sections: yes
@@ -18,15 +19,21 @@ output:
 
 # Bootstrap Functions for SAS and R 
 
+This section is to elucidate how the two functions work and to be implemented and illustrated with an analysis of a simple example with plots and interpretation.  The corresponding data set was uploaded in the repository. 
+
 ## SAS
 
-The SAS Bootstrap Function generated the 95% Confidence Intervals for the mean
+The SAS Bootstrap Function generated the 95% Confidence Intervals for the mean, the mean estimate for each parameter and the corresponding plots of the distrubtion of the bootstrap parameters.
+
+## R
 
 ```{r Bootstrap}
 
 
 
 ```
+### Micro-Benchmark of our R bootstrap against package **boot** bootstraps
+
 
 -----------------------
 
