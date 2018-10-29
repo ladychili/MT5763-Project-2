@@ -10,7 +10,7 @@ EI Topo Members:
 
 - Darren O Reilly, 180029457
 
-- Member
+- Konstantinos Theodosopoulos, 170026763
 
 - Member
 
