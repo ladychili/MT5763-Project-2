@@ -1,25 +1,25 @@
-  /* Sasfile statement loads data into buffers in the ram = faster processing*/
+  /* Sasfile statement loads data into buffers in the ram = faster processing */
   sasfile DataSet load; 
   
   proc surveyselect data =DataSet out=outboot;
   
   seed=1111; 
   
-  /* set method to Unrestricted Random Sampling/SRS WR*/
+  /* resample with replacement */
   method=urs; 
   
-  /* set sample size to 100% (1 = 100%)*/
+  /* each bootstrap sample has N observations */
     samparte=1
     
-    /* generate an output record every time it hits a given record, rather than only the first time*/
+    /* option to suppress the frequency var */
       outhits 
       
-      /* defining the number of bootstrap samples to generate*/
+      /* defining the number of bootstrap samples to generate */
       rep = 1000; 
        
        run;
       
-      /* frees up RAM after computer intensive processing complete*/
+      /* frees up RAM after computer intensive processing complete */
       safile DataSet close;
         
        /* turn off the output to the Output window */
@@ -42,6 +42,7 @@
             
             var curt;
             
+            /* compute 95% bootstrap confidence interval */
             output out=final pctlpts=2.5, 97.5 pctlpre=ci; 
             
             run;
