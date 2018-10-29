@@ -1,23 +1,48 @@
-sasfile DataSet load; /* Sasfile statement loads data into buffers in the ram = faster processing */
+  /* Sasfile statement loads data into buffers in the ram = faster processing*/
+  sasfile DataSet load; 
+  
   proc surveyselect data =DataSet out=outboot;
+  
   seed=1111; 
-  method=urs; /*bootstrap requires simple random sampling with replacment (also known as Unrestricted Random Sampling)*/
-    samparte=1 /* need the same sample size (this options enables choice of sampel size)(1 = 100%)*/
-      outhits /* OUTHITS makes sure that the procedure generates an output record every time it hits a given record, rather than only the first time*/
-      rep = 1000; /* specifying the number of bootstrap samples we want generated, also produces a by-variable*/
-        run;
-      safile DataSet close; /* frees up RAM after major processing completed */
+  
+  /* set method to Unrestricted Random Sampling/SRS WR*/
+  method=urs; 
+  
+  /* set sample size to 100% (1 = 100%)*/
+    samparte=1
+    
+    /* generate an output record every time it hits a given record, rather than only the first time*/
+      outhits 
+      
+      /* defining the number of bootstrap samples to generate*/
+      rep = 1000; 
+       
+       run;
+      
+      /* frees up RAM after computer intensive processing complete*/
+      safile DataSet close;
         
-        ods listing close; /* turn off the output to the Output window */
+       /* turn off the output to the Output window */
+        ods listing close; 
+        
         proc univariate data=outboot;
+        
         var x;
-        by Replicate; /* use Replicate as the by-variable */
+        /* use Replicate as the by-variable */
+        
+        by Replicate; 
+        
           output out=outall kurtosis=curt; 
+          
           run;
+          
           ods listing; /*  turns off the ODS destination that has our list output */
             
             proc univariate data=outall;
+            
             var curt;
-            output out=final pctlpts=2.5, 97.5 pctlpre=ci;
+            
+            output out=final pctlpts=2.5, 97.5 pctlpre=ci; 
+            
             run;
             
