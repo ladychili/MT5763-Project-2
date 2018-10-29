@@ -8,7 +8,7 @@ EI Topo Members:
 
 - Man-ho, SUEN, 180026297
 
-- Member
+- Darren O Reilly, 180029457
 
 - Member
 
