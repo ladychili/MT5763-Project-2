@@ -6,15 +6,15 @@ EI Topo Members:
 
 - Qingting Zheng, 180024570
 
-- Man-ho, SUEN, 180026297
+- Man-Ho Suen, 180026297
 
-- Darren O Reilly, 180029457
+- Darren O'Reilly, 180029457
 
 - Konstantinos Theodosopoulos, 170026763
 
-- Member
+- Jonathan Wall, 180007719
 
-- Member
+- Ying He, number
 
 ## Original Function `lmBoot()`
 
@@ -38,5 +38,18 @@ EI Topo Members:
 
 ## Work attribution
 
-TBA
+Statement of Original Work: We confirm that this repository is the work of our team, except where clearly indicated in the text.
+
+- Qingting Zheng __
+
+- Man-Ho Suen __
+
+- Darren O'Reilly __
+
+- Konstantinos Theodosopoulos __
+
+- Jonathan Wall __
+
+- Ying He __
+
 
