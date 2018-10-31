@@ -37,7 +37,9 @@ x <- runif(1000)
 y <- 20 + 2*x + rnorm(1000, 0, 1)
 inputData <- data.frame(x,y)
 
+system.time(test.super <- superlmBoot(y~x, inputData, 5000))
+
 # profiling ---------------------------------------------------------------
 
-profvis::profvis({superlmBoot(y~x, inputData, 5000)})
+profvis::profvis({test.super <- superlmBoot(y~x, inputData, 5000)})
 
