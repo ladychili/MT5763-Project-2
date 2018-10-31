@@ -1,9 +1,15 @@
-superlmBoot <- function(formula, data, B) {
+superlmBoot <- function(formula, data, B, alpha = 0.05) {
 # Purpose: paral bootstrapping linear model 
+  
 # Inputs: formula - formula for regression
 #         data - dataset for regression
 #         B - the number of bootstrap iterstions
-# Output: A matrix containing coefficients of all iteration
+#         alpha - alpha-level of confidence interval, default
+  
+# Output: A list containing
+#           estimates - estimates of all itetations
+#           CI - Bootstrap confidence intervals, default 0.05
+    
   require(parallel)
   require(foreach)
   myClust <- makeCluster(detectCores()-1, type = "PSOCK")
@@ -20,7 +26,9 @@ superlmBoot <- function(formula, data, B) {
   
   estMat <- matrix(unlist(a), nrow = B, byrow = TRUE)
   colnames(estMat) <- names(a[[1]])
-  return(estMat)
+  CI <- apply(estMat, 2, quantile, probs=c(alpha/2, 1-alpha/2))
+  return(list(estimates = estMat,
+              CI = t(CI)))
 }
 
 
