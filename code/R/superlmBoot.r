@@ -4,13 +4,13 @@ superlmBoot <- function(formula, data, B) {
 #         data - dataset for regression
 #         B - the number of bootstrap iterstions
 # Output: A matrix containing coefficients of all iteration
-  
-  myClust <- parallel::makeCluster(detectCores()-1, type = "PSOCK")
+  require(parallel)
+  require(foreach)
+  myClust <- makeCluster(detectCores()-1, type = "PSOCK")
   doParallel::registerDoParallel(myClust)
   
   n <- nrow(data)
   model <- lm(formula,data)
-  #
   a <- foreach(i = 1:B) %dopar% {
     resample <- data[sample(n, replace = TRUE),]
     re.model <- lm(formula, resample)
@@ -19,6 +19,7 @@ superlmBoot <- function(formula, data, B) {
   stopCluster(myClust)
   
   estMat <- matrix(unlist(a), nrow = B, byrow = TRUE)
+  colnames(estMat) <- names(a[[1]])
   return(estMat)
 }
 
