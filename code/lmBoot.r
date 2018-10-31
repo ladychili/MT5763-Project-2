@@ -26,14 +26,17 @@ lmBoot <- function(inputData, nBoot){
   
 }
 
-# test efficiency of original function
 
-# Test 1 - 50 obs. 5000 iteration
-test1 <- data.frame(x = mtcars$hp, y = mtcars$mpg)
-time1 <- system.time(lmBoot(test1, 5000))
 
-# Test 2 - 84 obs. 5000 iteration
-test2 <- data.frame(x = CO2$conc, y = CO2$uptake)
-time2 <- system.time(lmBoot(test2, 5000))
+
+x <- runif(1000)
+y <- 20 + 2*x + rnorm(1000, 0, 1)
+inputData <- data.frame(x,y)
+
+# profiling ---------------------------------------------------------------
+
+profvis::profvis({lmBoot(inputData, 5000)})
+
+
 
 
