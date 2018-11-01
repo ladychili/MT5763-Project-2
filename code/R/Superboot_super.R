@@ -26,9 +26,13 @@ lmBoot.v1 <- function(nboots,x,y){
 
 ##########################Super robust and super fast###########
 lmBoot.v2 <- function(nboots,x,y){
+     #data.frame or matrix are acceptable
+     #must seperate xs and ys
      clusterExport(cl,list('x','y','nboots'),envir =.GlobalEnv)
+     x <- model.matrix(y~x,data=data.frame(x,y))
      #using qr.rank to get rid of correlated variables
      x <- x[,qr(x)$pivot[1:qr(x)$rank]]
+     y <- as.matrix(inputdata['y'])
      i=1:nboots
     allcoefs <- parLapply(cl,i,fun = function(i){
           set.seed(i)
