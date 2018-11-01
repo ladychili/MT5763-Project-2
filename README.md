@@ -77,7 +77,7 @@ The improved function is significantly faster than the function in library`boot`
 
 
 ![boot.benchmark](https://github.com/ladychili/MT5763-Project-2/blob/master/profiling/R.boots.png)
-
+![boot.super](https://github.com/ladychili/MT5763-Project-2/blob/master/profiling/profsuper.png)
 
 ### Example Analysis
 
