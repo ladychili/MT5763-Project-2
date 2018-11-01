@@ -16,15 +16,70 @@ EI Topo Members:
 
 - Ying He, number
 
-## Original Function `lmBoot()`
+## R Bootstrapping 
 
-*details TBA*
+### Original Function _lmBoot()_
 
-## Improved Function `super.lmBoot()`
+This function does bootstrapping based on simply `y ~ x` regression, given a dataset with columns x and y
 
-*details TBA*
+Arguments: 
 
-## Example Analysis
+- inputData - a dateset with column x as explanatory variable and column y as reponse variable
+
+- nBoot - the number of bootstrapping iteration
+
+Output: 
+
+- A matrix containing coefficients of all iteration
+
+
+### Improved Functions
+
+We used a few parallel approaches to improve the efficiency of the original function `lmBoot()`. The improved versions are able to handle arbitrary numbers and types of explanatory variables, and user can specify the alpha level for confidence intervals.
+
+#### _superlmBoot()_
+
+Dependency:
+
+- _parallel_
+
+- _doParallel_
+
+- _foreach_
+
+Arguments: 
+
+- formula - formula for regression 
+
+- data - dataset for regression 
+
+- B - the number of bootstrap iterstions 
+
+- alpha - alpha-level of confidence interval, default 0.05
+        
+Output: a list containing
+
+- estimates - estimates of all itetations
+
+- CI - Bootstrap confidence intervals
+
+
+#### _ultralmBoot()_
+
+Dependency:
+
+- _parallel_
+
+- _doParallel_
+
+- _foreach_
+
+The arguments and output of `ultralmBoot()` are as same as `superlmBoot()`. 
+
+In short, same algorithm, but different parallel approach.
+
+
+### Example Analysis
 
 *details TBA* 
 
