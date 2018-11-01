@@ -61,6 +61,21 @@ Output: a list containing
 
 - CI - Bootstrap confidence intervals
 
+### Improvements summary
+
+Results from microbenchmark:(Unit: milliseconds)
+
+5 times tests for 1000 bootstrapp. Both using SNOW backend and 2 clusters
+The improved function is significantly faster than the function in library(boot)
+
+| expr  | min    | lq     | mean   | median | uq     | max    | neval | cld |
+|-------|--------|--------|--------|--------|--------|--------|-------|-----|
+| boot  | 780.73 | 823.52 | 859.51 | 855.55 | 911.43 | 926.31 | 5.00  | b   |
+| super | 51.39  | 54.50  | 63.81  | 58.99  | 59.69  | 94.51  | 5.00  | a   |
+
+
+
+
 ### Example Analysis
 
 *details TBA* 
