@@ -1,9 +1,4 @@
 
-
-
-
-
-
 #######A super fast version#####
 #  darwbacks: 1. only accept matrix 
 #             2. singularity problems
@@ -27,6 +22,7 @@ lmBoot.v1 <- function(nboots,x,y){
         })
       }
 
+######################## The final version ##############################
 
 
 ##########################Super robust and super fast###########
@@ -34,7 +30,6 @@ lmBoot.v1 <- function(nboots,x,y){
 mycl <- makeSOCKcluster(c('localhost','localhost'))
 
 lmBoot.super <- function(nboots=1000,inputdata,formula,cl,seeds){
-  #
   # 
   # data.frame only
   # convert all categorical 
