@@ -22,3 +22,20 @@ lmBoot.v1 <- function(nboots,x,y){
         })
       }
 
+
+
+##########################Super robust and super fast###########
+lmBoot.v2 <- function(nboots,x,y){
+     clusterExport(cl,list('x','y','nboots'),envir =.GlobalEnv)
+     #using qr.rank to get rid of correlated variables
+     x <- x[,qr(x)$pivot[1:qr(x)$rank]]
+     i=1:nboots
+    allcoefs <- parLapply(cl,i,fun = function(i){
+          set.seed(i)
+          indexs <- sample(1:nrow(y),nrow(y),replace = TRUE)
+          #qr.solve()may be faster
+          ixx <- crossprod(x[indexs,],x[indexs,])
+          list(solve(ixx)%*%crossprod(x[indexs,],y[indexs,]))
+          })
+}
+
