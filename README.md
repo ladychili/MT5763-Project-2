@@ -76,7 +76,7 @@ The improved function is significantly faster than the function in library`boot`
 | super | 51.39  | 54.50  | 63.81  | 58.99  | 59.69  | 94.51  | 5.00  | a   |
 
 
-?![avatar](/user/desktop/doge.png)
+![boot.benchmark](https://github.com/ladychili/MT5763-Project-2/blob/master/profiling/R.boots.png)
 
 
 ### Example Analysis
