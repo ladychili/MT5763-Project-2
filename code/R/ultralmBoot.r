@@ -6,16 +6,18 @@ doBoot <- function(index, formula, regData){
 }
 
 ultralmBoot <- function(formula, data, B, alpha = 0.05){
-  # Purpose: paral bootstrapping linear model 
+  # Purpose: Bootstrapping on linear regression model, the
+  #         numbers and types of covariates can be arbitrary
   
   # Inputs: formula - formula for regression
   #         data - dataset for regression
   #         B - the number of bootstrap iterstions
-  #         alpha - alpha-level of confidence interval, default
+  #         alpha - alpha-level of confidence interval, default 0.05
   
   # Output: A list containing
   #           estimates - estimates of all itetations
-  #           CI - Bootstrap confidence intervals, default 0.05
+  #           CI - Bootstrap confidence intervals
+  
   require(parallel)
   myClust <- makeCluster(detectCores()-1, type = "PSOCK")
   doParallel::registerDoParallel(myClust)
