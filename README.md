@@ -14,7 +14,7 @@ EI Topo Members:
 
 - Jonathan Wall, 180007719
 
-- Ying He, number
+- Ying He, 180011028
 
 ## R Bootstrapping 
 
