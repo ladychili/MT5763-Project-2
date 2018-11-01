@@ -35,17 +35,15 @@ Output:
 
 ### Improved Functions
 
-We used a few parallel approaches to improve the efficiency of the original function `lmBoot()`. The improved versions are able to handle arbitrary numbers and types of explanatory variables, and user can specify the alpha level for confidence intervals.
+We used a few parallel approaches to improve the efficiency of the original function `lmBoot()`. 
 
-#### _superlmBoot()_
+The function _ultralmBoot()_ is able to handle arbitrary numbers and types of explanatory variables, and user can specify the alpha level for confidence intervals. 
 
 Dependency:
 
 - _parallel_
 
 - _doParallel_
-
-- _foreach_
 
 Arguments: 
 
@@ -62,22 +60,6 @@ Output: a list containing
 - estimates - estimates of all itetations
 
 - CI - Bootstrap confidence intervals
-
-
-#### _ultralmBoot()_
-
-Dependency:
-
-- _parallel_
-
-- _doParallel_
-
-- _foreach_
-
-The arguments and output of `ultralmBoot()` are as same as `superlmBoot()`. 
-
-In short, same algorithm, but different parallel approach.
-
 
 ### Example Analysis
 
@@ -117,4 +99,7 @@ Statement of Original Work: We confirm that this repository is the work of our t
 RStudio Team (2018). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA URL <http://www.rstudio.com/>.
 
 C. Donovan (2018). MT5763 Project 2 - code collaboration and computer intensive inference. Available at <https://moody.st-andrews.ac.uk/moodle/pluginfile.php/705037/mod_resource/content/1/MT5763_project%202%20description.nb.html> (Accessed at 29 Oct 2018) 
+
+
+
 
