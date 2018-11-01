@@ -66,7 +66,9 @@ Output: a list containing
 Results from microbenchmark:(Unit: milliseconds)
 
 5 times tests for 1000 bootstrapp. Both using SNOW backend and 2 clusters
-The improved function is significantly faster than the function in library(boot)
+
+The improved function is significantly faster than the function in library`boot`
+
 
 | expr  | min    | lq     | mean   | median | uq     | max    | neval | cld |
 |-------|--------|--------|--------|--------|--------|--------|-------|-----|
@@ -74,6 +76,7 @@ The improved function is significantly faster than the function in library(boot)
 | super | 51.39  | 54.50  | 63.81  | 58.99  | 59.69  | 94.51  | 5.00  | a   |
 
 
+?![avatar](/user/desktop/doge.png)
 
 
 ### Example Analysis
