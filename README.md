@@ -92,7 +92,7 @@ Statement of Original Work: We confirm that this repository is the work of our t
 
 - Jonathan Wall __
 
-- Ying He __
+- Ying He __ Optimized bootstrap algorithm
 
 ## Reference List
 
