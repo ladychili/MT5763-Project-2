@@ -2,6 +2,16 @@
   /*Function: To generate 95% confidence intervals for the mean, the mean
   estimate for each parameter and plots of the distributions of the bootstrap
   parameters for one covariate*/
+  /*Inputs: 																								*/
+	/*	- NumberOfLoops: the number of bootstrap iterations
+	/*	- NumberOfBoots: the number of bootstrap sample generated
+	/*	- Dataset: A SAS dataset containing the response and covariate										*/
+	/*	- XVar: The covariate for our regression model (gen. continuous numeric)						*/
+	/*	- YVar: The response variable for our regression model (gen. continuous numeric)				*/
+  /*Outputs:																								*/
+	/*	- 95% CI for the mean */
+	/*	- Mean estimate for each parameter */
+	/*	- plot of the distribution of the bootstrap parameters */
 
   %macro RegressionRandTest(NoOfBoots, NoOfLoops, DataSet, Xvar, Yvar);
 
@@ -69,15 +79,6 @@
             
       run;
         
-      /* plot of the distribution of the bootstrap mean*/
-	    proc gchart data=outall;
-
-		      note 'Plot of the distribution of the bootstrap mean';
-
-        	vbar meanX; 
-
-  	  run;
-    
     /* compute 95% bootstrap confidence interval for mean estimate for each parameter*/
     proc univariate data=bootEstimates;
     
