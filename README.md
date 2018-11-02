@@ -102,7 +102,7 @@ Statement of Original Work: We confirm that this repository is the work of our t
 
 - Qingting Zheng __
 
-- Man-Ho Suen __
+- Man-Ho Suen __ SAS bootstrapping macro and RTF output and example analysis 
 
 - Darren O'Reilly __
 
