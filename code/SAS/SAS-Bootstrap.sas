@@ -1,10 +1,17 @@
-  /*Inaugurate Fullstimer option to collect performance*/
+  /*SAS Macro for bootstrapping*/
+  /*Function: To generate 95% confidence intervals for the mean, the mean
+  estimate for each parameter and plots of the distributions of the bootstrap
+  parameters for one covariate*/
+
+  %macro RegressionRandTest(NoOfBoots, NoOfLoops, DataSet, Xvar, Yvar);
+
+  /* Set the fullstimer option to write sufficient performance information to the log */
   options fullstimer;
   
   /* Sasfile statement loads data into buffers in the ram = faster processing */
-  sasfile DataSet load; 
+  sasfile &DataSet load; 
   
-  proc surveyselect data =DataSet out=outboot
+  proc surveyselect data=&DataSet out=outboot
   
     seed=1111
   
@@ -12,66 +19,110 @@
     method=urs 
   
   /* each bootstrap sample has N observations */
-  sampasize=1
+   sampasize= &NoOfLoops
     
   /* option to suppress the frequency var */
     outhits 
       
   /* defining the number of bootstrap samples to generate */
-    rep = 1000; 
+    rep = &NoOfBoots; 
        
   run;
       
       /* frees up RAM after computer intensive processing complete */
-      sasfile DataSet close;
+      sasfile &DataSet close;
         
-       /* turn off the output to the Output window */
-        ods listing close; 
+      /* turn off the output to the Output window */
+      ods listing close; 
         
-        proc univariate data=outboot;
+      proc univariate data=outboot;
         
-          var x;
-          /* use Replicate as the by-variable */
+         var &Xvar;
+         /* use Replicate as the by-variable */
         
-          by Replicate; 
+         by Replicate; 
         
-          output out=outall mean=meanX; 
+         output out=outall mean=meanX; 
           
-        run;
+      run;
           
-        ods listing; /*  turns off the ODS destination that has our list output */
-            
-        proc univariate data=outall noprint;
-            
-           var meanX;
-            
-           /* compute 95% bootstrap confidence interval for the mean*/
-           output out=final pctlpts=2.5, 97.5 pctlpre=ci; 
-            
-        run;
+      ods listing; /*  turns off the ODS destination that has our list output */
+        
+      /* Obtain bootstrapped regression parameter estimates*/
+      proc reg data=outboot outest=bootEstimates noprint;
     
-    /* Obtain bootstrapped regression parameter estimates*/
-    proc reg data=outboot outest=bootEstimates noprint;
+         model &Yvar=&Xvar; 
+      
+         by replicate; 
+      
+      run;
+        
+      /*ODS output to an RTF*/
+      ods rtf author="El Topo" title="SAS Output Results for Bootstrapping" file="output.rtf";
+
+      proc univariate data=outall;
+            
+         var meanX;
+            
+         /* compute 95% bootstrap confidence interval for the mean*/
+         output out=final pctlpts=2.5, 97.5 pctlpre=ci; 
+            
+      run;
+        
+      /* plot of the distribution of the bootstrap mean*/
+	    proc gchart data=outall;
+
+		      note 'Plot of the distribution of the bootstrap mean';
+
+        	vbar meanX; 
+
+  	  run;
     
-      model Y=X; 
-      
-      by replicate; 
-      
-    run;
     /* compute 95% bootstrap confidence interval for mean estimate for each parameter*/
     proc univariate data=bootEstimates;
     
-      var X;
+      var &Xvar;
       
       output out=regBootCI pctlpts=2.5, 97.5 pctlpre=CI; 
       
     run;
     
-    /* plots of the distrubtions of the bootstraps */
+    /*Store the result and rename the var*/
+	  data Resultholder;
+
+    	set bootEstimates;
+
+    	keep Intercept &Xvar;
+
+    	rename Intercept=RandomIntercept &Xvar=RandomSlope;
+
+	  run;
+    
+    /*Print out mean estimate for each parameter to RTF*/
+	  proc print data=Resultholder; 
+	  run;
+    
+    /* plots of the distrubtions of the bootstraps parameters*/
     proc gchart data=bootEstimates; 
     
-      vbar X;
+	    note 'Plot of the distribution of the bootstrap parameters';
+
+      vbar &Xvar;
       
     run;
+    
+    /* Reset log options */
+	proc printto;
+	run;
+
+ods rtf close;
+
+%mend;
+
+/*Run the marco for Fitness.csv*/
+%RegressionRandTest(NoOfBoots = 100 , NoOfLoops = 100, DataSet = Mt5763.Fitness, Xvar = Runtime, Yvar = Oxygen)
+
+
+
             
          
