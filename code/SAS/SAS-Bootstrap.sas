@@ -29,7 +29,7 @@
     method=urs 
   
   /* each bootstrap sample has N observations */
-   sampasize= &NoOfLoops
+   sampsize= &NoOfLoops
     
   /* option to suppress the frequency var */
     outhits 
