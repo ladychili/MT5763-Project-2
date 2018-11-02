@@ -13,10 +13,48 @@
 	/*	- Mean estimate for each parameter */
 	/*	- plot of the distribution of the bootstrap parameters */
 
+%macro passinfo / store;
+
+  data _null_;
+    length  hostname $ 80;
+    hostname=' ';  /* avoid message about uninitialized */
+    temp=datetime();
+    temp2=lowcase(trim(left(put(temp,datetime16.))));
+    call symputx('datetime', temp2);
+    call symput('host', "%sysget(computername)");
+  run;
+
+  %put PASS HEADER BEGIN;
+  %put PASS HEADER os=&sysscp;
+  %put PASS HEADER os2=&sysscpl;
+  %put PASS HEADER host=&host;
+  %put PASS HEADER ver=&sysvlong;
+  %put PASS HEADER date=&datetime;
+  %put PASS HEADER parm=&sysparm;
+
+  options nosource nonotes;
+  proc options option=MEMSIZE ; run;
+  proc options option=SUMSIZE ; run;
+  proc options option=SORTSIZE ; run;
+  options source notes;
+
+  %put PASS HEADER END;
+
+%mend passinfo;
+
   %macro RegressionRandTest(NoOfBoots, NoOfLoops, DataSet, Xvar, Yvar);
 
   /* Set the fullstimer option to write sufficient performance information to the log */
   options fullstimer;
+  
+/* Save log in a file */
+options nonotes nosource;
+proc printto log="D:\MyProgram.log";
+run;
+options notes source;
+
+/* Call the PASSINFO macro */
+%passinfo;
   
   /* Sasfile statement loads data into buffers in the ram = faster processing */
   sasfile &DataSet load; 
