@@ -97,7 +97,7 @@ From the plot above, it was seen that the shape of the histogram was bell-shaped
 
 The mean was close to -3.24.  For single covariate analysis, it suggested the linear relationship as follows.
 
-![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn.gif)
+![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn2.gif)
 
 
 - dataset to be uploaded
