@@ -18,56 +18,39 @@ EI Topo Members:
 
 ## R Bootstrapping 
 
-### Original Function _lmBoot()_
+### Improved Function _lmBoot.super()_
 
-This function does bootstrapping based on simply `y ~ x` regression, given a dataset with columns x and y
-
-Arguments: 
-
-- inputData - a dateset with column x as explanatory variable and column y as reponse variable
-
-- nBoot - the number of bootstrapping iteration
-
-Output: 
-
-- A matrix containing coefficients of all iteration
-
-
-### Improved Functions
-
-We used a few parallel approaches to improve the efficiency of the original function `lmBoot()`. 
-
-The function _ultralmBoot()_ is able to handle arbitrary numbers and types of explanatory variables, and user can specify the alpha level for confidence intervals. 
+The final version _lmBoot.super()_ is able to handle arbitrary numbers and types of explanatory variables, and below is the documentation for it.
 
 Dependency:
 
-- _parallel_
-
-- _doParallel_
+- _snow_
 
 Arguments: 
 
-- formula - formula for regression 
+- _nboots_ - the number of bootstrap iterstions, default by 1000
 
-- data - dataset for regression 
+- _inputdata_ - dataset for regression 
 
-- B - the number of bootstrap iterstions 
+- _formula_ - formula for regression 
 
-- alpha - alpha-level of confidence interval, default 0.05
+- _cl_ - sock cluster for paralleling
+
+- _seeds_ - sampling seed
         
 Output: a list containing
 
-- estimates - estimates of all itetations
+- _estimates_ - estimates of all itetations
 
-- CI - Bootstrap confidence intervals
+- _CI_ - Bootstrap confidence intervals
 
-### Improvements summary
+### __lmBoot.super()__ vs __boot()__
 
-Results from microbenchmark:(Unit: milliseconds)
+Results from *microbenchmark*:(Unit: milliseconds)
 
-5 times tests for 1000 bootstrapp. Both using SNOW backend and 2 clusters
+5 times tests for 1000 bootstrap. Both using SNOW backend and 2 clusters.
 
-The improved function is significantly faster than the function in library`boot`
+The improved function is significantly faster than the function in library `boot`
 
 
 | expr  | min    | lq     | mean   | median | uq     | max    | neval | cld |
@@ -81,7 +64,10 @@ The improved function is significantly faster than the function in library`boot`
 
 ### Example Analysis
 
-*details TBA* 
+_TBA_
+
+
+## SAS Bootstrapping
 
 This section is to elucidate how the two functions work and to be implemented and illustrated with an analysis of a simple example with plots and interpretation.  The corresponding data set was uploaded in the repository. 
 
@@ -115,14 +101,12 @@ From the fullstimers log,
 (For detailed log file, please access (https://github.com/ladychili/MT5763-Project-2/tree/master/code/SAS/Fullstimer%20Log))
 The Step Count was reduced from 1246 to 9.  The time lapse was dropped from 12 seconds to 3 second.
 
-- *microbenchmark* results against package *boot*
-
 
 ## Work attribution
 
 Statement of Original Work: We confirm that this repository is the work of our team, except where clearly indicated in the text.
 
-- Qingting Zheng __
+- Qingting Zheng __ Modified lmBoot.super(), R profiling, example analysis
 
 - Man-Ho Suen __ SAS bootstrapping macro and RTF output and example analysis 
 
