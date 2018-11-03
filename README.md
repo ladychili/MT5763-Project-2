@@ -40,11 +40,12 @@ Arguments:
         
 Output: a list containing
 
-- _estimates_ - estimates of all itetations
+- _coef_ - coefficient estimates of all itetations
 
-- _CI_ - Bootstrap confidence intervals
+- _CI_ - Bootstrap confidence intervals for each coefficients
 
-### __lmBoot.super()__ vs __boot()__
+
+### lmBoot.super() vs boot()
 
 Results from *microbenchmark*:(Unit: milliseconds)
 
