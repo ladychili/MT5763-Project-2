@@ -102,7 +102,18 @@ The mean was close to -3.24.  For single covariate analysis, it suggested the li
 
 - dataset to be uploaded
 
+SAS
+
+Fitness.csv can be accessed at the link below.
+(https://github.com/ladychili/MT5763-Project-2/tree/master/data)
+
 - Figure indicating speed increase attributable to each major changes
+
+SAS
+
+From the fullstimers log,
+(https://github.com/ladychili/MT5763-Project-2/tree/master/code/SAS/Fullstimer%20Log)
+The Step Count was reduced from 1246 to 9.  The time lapse was dropped from 12 seconds to 1 second.
 
 - *microbenchmark* results against package *boot*
 
