@@ -113,7 +113,7 @@ SAS
 
 From the fullstimers log,
 (For detailed log file, please access (https://github.com/ladychili/MT5763-Project-2/tree/master/code/SAS/Fullstimer%20Log))
-The Step Count was reduced from 1246 to 9.  The time lapse was dropped from 12 seconds to 1 second.
+The Step Count was reduced from 1246 to 9.  The time lapse was dropped from 12 seconds to 3 second.
 
 - *microbenchmark* results against package *boot*
 
