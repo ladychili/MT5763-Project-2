@@ -123,9 +123,9 @@ Statement of Original Work: We confirm that this repository is the work of our t
 
 C. Donovan (2018). MT5763 Project 2 - code collaboration and computer intensive inference. Available at <https://moody.st-andrews.ac.uk/moodle/pluginfile.php/705037/mod_resource/content/1/MT5763_project%202%20description.nb.html> (Accessed at 29 Oct 2018) 
 
-RStudio Team (2018). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA URL <http://www.rstudio.com/>.
-
 Rawlings, J.O., Pantula, S.G., Dickey, D.A.(1998) Applied Regression Analysis: A Research Tool 2nd Edition
+
+RStudio Team (2018). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA URL <http://www.rstudio.com/>.
 
 SASnrd (2018). Track Performance in SAS with the LOGPARSE Macro. Available at <http://sasnrd.com/sas-logparse-macro/> (Accessed at 2 Nov 2018)
 
