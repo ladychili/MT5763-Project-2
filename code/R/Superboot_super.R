@@ -71,6 +71,12 @@ lmBoot.super <- function(nboots=1000,inputdata,formula,cl,seeds){
     #
     list(solve(ixx)%*%crossprod(x[indexs,],y[indexs,]))
   })
+  # organize the output
+  coefMat <- matrix(unlist(allcoefs),nrow = 1000, byrow = TRUE)
+  colnames(coefMat) <- attributes(allcoefs[[1]][[1]])$dimnames[[1]]
+  CI <- apply(coefMat, 2, quantile, probs=c(0.025, 0.975))
+  return(list(coef = coefMat,
+              CI = t(CI)))
 }
 
 
