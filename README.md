@@ -87,7 +87,14 @@ This section is to elucidate how the two functions work and to be implemented an
 
 The Bootstrap Functions generated the 95% Confidence Intervals for the mean, the mean estimate for each parameter and the corresponding plots of the distrubtion of the bootstrap parameters.
 
-- plots, interpreteation, 
+- plots, interpreteation,
+
+SAS
+
+![SASbootplot]        
+(https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/SAS%20plot%20bootstrap.png)
+      
+From the plot above, it was seen that the shape of the histogram was bell-shaped, in spite of being slightly skewed left, which fitted the normality in general. 
 
 - dataset to be uploaded
 
