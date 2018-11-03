@@ -4,6 +4,9 @@
 
 ##########################Super robust and super fast###########
 
+# Intiating library snow for the function
+library(snow)
+
 mycl <- makeSOCKcluster(c('localhost','localhost'))
 
 lmBoot.super <- function(nboots=1000,inputdata,formula,cl,seeds){
