@@ -29,14 +29,5 @@ lmBoot <- function(inputData, nBoot){
 
 
 
-x <- runif(1000)
-y <- 20 + 2*x + rnorm(1000, 0, 1)
-inputData <- data.frame(x,y)
-
-# profiling ---------------------------------------------------------------
-
-profvis::profvis({lmBoot(inputData, 5000)})
-
-
 
 
