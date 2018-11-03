@@ -97,8 +97,7 @@ From the plot above, it was seen that the shape of the histogram was bell-shaped
 
 The mean was close to -3.24.  For single covariate analysis, it suggested the linear relationship as follows.
 
-
-![equation](<img src="http://latex.codecogs.com/gif.latex?Y_{oxygen}&space;=&space;\beta_0&space;-&space;3.24&space;\times&space;\beta_{runtime}" title="Y_{oxygen} = \beta_0 - 3.24 \times \beta_{runtime}" />)
+![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn.gif)
 
 
 - dataset to be uploaded
