@@ -81,7 +81,7 @@ lmBoot.super <- function(nboots=1000,inputdata,formula,cl,seeds){
 
 
 
-tests <- lmBoot.super(nboots=1000,inputdata=babiesDf,formula=as.formula(wt~dwt+number),cl=mycl,seeds=1)
+
 
 
 
