@@ -96,6 +96,7 @@ SAS
 From the plot above, it was seen that the shape of the histogram was bell-shaped, in spite of being slightly skewed left, which fitted the normality in general. 
 
 The mean was close to -3.24.  It suggested the linear relationship as follows.
+
 $$
 
 Y_oxygen = $\beta_0 -3.24 $\beta_runtime
