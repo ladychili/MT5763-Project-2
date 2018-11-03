@@ -4,7 +4,7 @@
   parameters for one covariate*/
   /*Inputs: 																								*/
 	/*	- NumberOfLoops: the number of bootstrap iterations
-	/*	- NumberOfBoots: the number of bootstrap sample generated
+	/*	- NumberOfRep: the number of bootstrap dataset to be stacked
 	/*	- Dataset: A SAS dataset containing the response and covariate										*/
 	/*	- XVar: The covariate for our regression model (gen. continuous numeric)						*/
 	/*	- YVar: The response variable for our regression model (gen. continuous numeric)				*/
@@ -42,7 +42,7 @@
 
 %mend passinfo;
 
-  %macro RegressionRandTest(NoOfBoots, NoOfLoops, DataSet, Xvar, Yvar);
+  %macro RegressionRandTest(NoOfRep, NoOfLoops, DataSet, Xvar, Yvar);
 
   /* Set the fullstimer option to write sufficient performance information to the log */
   options fullstimer;
@@ -72,8 +72,8 @@ options notes source;
   /* option to suppress the frequency var */
     outhits 
       
-  /* defining the number of bootstrap samples to generate */
-    rep = &NoOfBoots; 
+  /* defining the number of bootstrap datasets to be stacked */
+    rep = &NoOfRep; 
        
   run;
       
@@ -159,7 +159,7 @@ ods rtf close;
 %mend;
 
 /*Run the marco for Fitness.csv*/
-%RegressionRandTest(NoOfBoots = 100 , NoOfLoops = 100, DataSet = Mt5763.Fitness, Xvar = Runtime, Yvar = Oxygen)
+%RegressionRandTest(NoOfRep = 100 , NoOfLoops = 100, DataSet = Mt5763.Fitness, Xvar = Runtime, Yvar = Oxygen)
 
 
 
