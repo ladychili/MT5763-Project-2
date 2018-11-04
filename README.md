@@ -87,7 +87,7 @@ The mean was close to -3.24.  For single covariate analysis, it suggested the li
 ![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn2.gif)
 
 
-- dataset to be uploaded
+- dataset
 
 SAS
 
@@ -99,8 +99,8 @@ Fitness.csv can be accessed at the link below.
 SAS
 
 From the fullstimers log,
-(For detailed log file, please access (https://github.com/ladychili/MT5763-Project-2/tree/master/code/SAS/Fullstimer%20Log))
-The Step Count was reduced from 1246 to 9.  The time lapse was dropped from 12 seconds to 3 second.
+(for detailed log files, please access (https://github.com/ladychili/MT5763-Project-2/tree/master/code/SAS/Fullstimer%20Log))
+The Step Count was reduced from 1246 to 9.  The time lapse was dropped from 12 seconds to 3 seconds.
 
 
 ## Work attribution
