@@ -93,11 +93,11 @@ The inputs and outputs were described as follows.
 	- Mean estimate for each parameter
 	- plot of the distribution of the bootstrap parameters
   
-  After running the macro, by inputing the following into the Editor in SAS.
+After running the macro, by inputing the following into the Editor in SAS.  Fitness.csv was imported under Mt5763 library.  The Randomisation test was undergone with 100 bootstraps dataset and 100 boostrap iteration, modelling Oxygen against Runtime. 
   
   __*%RegressionRandTest(NoOfRep = 100 , NoOfLoops = 100, DataSet = Mt5763.Fitness, Xvar = Runtime, Yvar = Oxygen)*__
   
-  The simple example below could be generated. 
+  The simple example below could be generated and analysis was in the next session. 
 
 ### Plots and interpreteation
 
@@ -110,6 +110,8 @@ The mean from the graph was close to -3.24.  The mean computed by SAS is -3.2972
 ![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn3.gif)
 
 The corresponding 95% Confidence Interval was [-3.63193, -2.96430].
+
+The result implied that Oxygen intake rate had negatively linear relationship with the RunTime.  In other words, the Oxygen intake rate decreased if the RunTime increased.  It could be interpreted as one can run faster with a higher oxygen intake rate.  The result was reasonable as a higher oxygen intake rate usually indicated one with stronger physical ability.  
 
 ### Dataset
 
