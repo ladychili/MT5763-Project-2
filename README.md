@@ -105,9 +105,11 @@ The inputs and outputs were described as follows.
       
 From the plot above, it was seen that the shape of the histogram was bell-shaped, in spite of being slightly skewed left, which fitted the normality in general. 
 
-The mean was close to -3.24.  For single covariate analysis, it suggested the linear relationship as follows.
+The mean from the graph was close to -3.24.  The mean computed by SAS is -3.2972864. For single covariate analysis, it suggested the linear relationship as follows.
 
-![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn2.gif)
+![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn3.gif)
+
+The corresponding 95% Confidence Interval is [-3.63193, -2.96430].
 
 ### Dataset
 
