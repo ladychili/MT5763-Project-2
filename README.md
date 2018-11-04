@@ -74,9 +74,7 @@ This section is to elucidate how the two functions work and to be implemented an
 
 The Bootstrap Functions generated the 95% Confidence Intervals for the mean, the mean estimate for each parameter and the corresponding plots of the distrubtion of the bootstrap parameters.
 
-- plots, interpreteation,
-
-SAS
+### Plots and interpreteation
 
 ![SASbootplot](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/SAS%20plot%20bootstrap.png)
       
@@ -87,20 +85,16 @@ The mean was close to -3.24.  For single covariate analysis, it suggested the li
 ![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn2.gif)
 
 
-- dataset
-
-SAS
+### Dataset
 
 Fitness.csv can be accessed at the link below.
 (https://github.com/ladychili/MT5763-Project-2/tree/master/data)
 
-- Figure indicating speed increase attributable to each major changes
-
-SAS
+### Figure indicating speed increase attributable to each major changes
 
 From the fullstimers log,
 (for detailed log files, please access (https://github.com/ladychili/MT5763-Project-2/tree/master/code/SAS/Fullstimer%20Log))
-The Step Count was reduced from 1246 to 9.  The time lapse was dropped from 12 seconds to 3 seconds.
+The Step Count was reduced from 1246 to 9.  The time lapse was dropped from 12 seconds to 3 seconds.  It could be seen that the improvement was significant. 
 
 
 ## Work attribution
