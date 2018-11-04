@@ -94,7 +94,9 @@ The inputs and outputs were described as follows.
 	
 	- YVar: The response variable for our regression model (gen. continuous numeric)	
         
-  Outputs:																								
+  Outputs:
+  
+  
 	- 95% CI for the mean
 	
 	- Mean estimate for each parameter
