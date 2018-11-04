@@ -74,6 +74,31 @@ This section is to elucidate how the two functions work and to be implemented an
 
 The Bootstrap Functions generated the 95% Confidence Intervals for the mean, the mean estimate for each parameter and the corresponding plots of the distrubtion of the bootstrap parameters.
 
+### Function
+
+It was designed to generate 95% confidence intervals for the mean, the mean estimate for each parameter and plots of the distributions of the bootstrap parameters for one covariate*/
+
+### How to use 
+
+The inputs and outputs were described as follows.  
+
+ Inputs: 																
+	- NumberOfLoops: the number of bootstrap iterations
+	- NumberOfRep: the number of bootstrap dataset to be stacked
+	- Dataset: A SAS dataset containing the response and covariate										- XVar: The covariate for our regression model (gen. continuous numeric)						
+	- YVar: The response variable for our regression model (gen. continuous numeric)	
+        
+  Outputs:																								
+	- 95% CI for the mean
+	- Mean estimate for each parameter
+	- plot of the distribution of the bootstrap parameters
+  
+  After running the macro, by inputing the following into the Editor in SAS.
+  
+  *%RegressionRandTest(NoOfRep = 100 , NoOfLoops = 100, DataSet = Mt5763.Fitness, Xvar = Runtime, Yvar = Oxygen)*
+  
+  The simple example below could be generated. 
+
 ### Plots and interpreteation
 
 ![SASbootplot](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/SAS%20plot%20bootstrap.png)
@@ -83,7 +108,6 @@ From the plot above, it was seen that the shape of the histogram was bell-shaped
 The mean was close to -3.24.  For single covariate analysis, it suggested the linear relationship as follows.
 
 ![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn2.gif)
-
 
 ### Dataset
 
