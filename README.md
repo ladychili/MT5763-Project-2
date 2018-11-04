@@ -82,22 +82,32 @@ It was designed to generate 95% confidence intervals for the mean, the mean esti
 
 The inputs and outputs were described as follows.  
 
- Inputs: 																
+ Inputs: 						
+ 
 	- NumberOfLoops: the number of bootstrap iterations
+	
 	- NumberOfRep: the number of bootstrap dataset to be stacked
-	- Dataset: A SAS dataset containing the response and covariate										- XVar: The covariate for our regression model (gen. continuous numeric)						
+	
+	- Dataset: A SAS dataset containing the response and covariate	
+	
+	- XVar: The covariate for our regression model (gen. continuous numeric)
+	
 	- YVar: The response variable for our regression model (gen. continuous numeric)	
         
   Outputs:																								
 	- 95% CI for the mean
+	
 	- Mean estimate for each parameter
+	
 	- plot of the distribution of the bootstrap parameters
   
-After running the macro, by inputing the following into the Editor in SAS.  Fitness.csv was imported under Mt5763 library.  The Randomisation test was undergone with 100 bootstraps dataset and 100 boostrap iteration, modelling Oxygen against Runtime. 
+After running the macro, by inputing the following into the Editor in SAS.  
   
   __*%RegressionRandTest(NoOfRep = 100 , NoOfLoops = 100, DataSet = Mt5763.Fitness, Xvar = Runtime, Yvar = Oxygen)*__
   
-  The simple example below could be generated and analysis was in the next session. 
+Fitness.csv was imported under Mt5763 library.  The Randomisation test was undergone with 100 bootstraps dataset and 100 boostrap iteration, modelling Oxygen against Runtime. 
+
+The simple example below could be generated and analysis was in the next session. 
 
 ### Plots and interpreteation
 
