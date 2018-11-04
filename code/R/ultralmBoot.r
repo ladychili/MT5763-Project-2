@@ -15,7 +15,7 @@ ultralmBoot <- function(formula, data, B, alpha = 0.05){
   #         alpha - alpha-level of confidence interval, default 0.05
   
   # Output: A list containing
-  #           estimates - estimates of all itetations
+  #           estimates - estimates of all iterations
   #           CI - Bootstrap confidence intervals
   
   require(parallel)
