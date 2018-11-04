@@ -76,7 +76,7 @@ The Bootstrap Functions generated the 95% Confidence Intervals for the mean, the
 
 ### Function
 
-It was designed to generate 95% confidence intervals for the mean, the mean estimate for each parameter and plots of the distributions of the bootstrap parameters for one covariate*/
+It was designed to generate 95% confidence intervals for the mean, the mean estimate for each parameter and plots of the distributions of the bootstrap parameters for one covariate.
 
 ### How to use 
 
@@ -95,7 +95,7 @@ The inputs and outputs were described as follows.
   
   After running the macro, by inputing the following into the Editor in SAS.
   
-  *%RegressionRandTest(NoOfRep = 100 , NoOfLoops = 100, DataSet = Mt5763.Fitness, Xvar = Runtime, Yvar = Oxygen)*
+  __*%RegressionRandTest(NoOfRep = 100 , NoOfLoops = 100, DataSet = Mt5763.Fitness, Xvar = Runtime, Yvar = Oxygen)*__
   
   The simple example below could be generated. 
 
