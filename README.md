@@ -63,14 +63,15 @@ The improved function is significantly faster than the function in library `boot
 ![boot.benchmark](https://github.com/ladychili/MT5763-Project-2/blob/master/profiling/R.boots.png)
 ![boot.super](https://github.com/ladychili/MT5763-Project-2/blob/master/profiling/profsuper.png)
 
-### Example Analysis
-
-_TBA_
-
-
-## SAS Bootstrapping
+## Example Analysis
 
 This section is to elucidate how the two functions work and to be implemented and illustrated with an analysis of a simple example with plots and interpretation.  The corresponding data set was uploaded in the repository. 
+
+## R
+
+TBC
+
+## SAS Bootstrapping
 
 The Bootstrap Functions generated the 95% Confidence Intervals for the mean, the mean estimate for each parameter and the corresponding plots of the distrubtion of the bootstrap parameters.
 
