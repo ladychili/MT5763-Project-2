@@ -109,7 +109,7 @@ The mean from the graph was close to -3.24.  The mean computed by SAS is -3.2972
 
 ![equation](https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/Output/CodeCogsEqn3.gif)
 
-The corresponding 95% Confidence Interval is [-3.63193, -2.96430].
+The corresponding 95% Confidence Interval was [-3.63193, -2.96430].
 
 ### Dataset
 
