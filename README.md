@@ -96,6 +96,9 @@ From the fullstimers log,
 (for detailed log files, please access (https://github.com/ladychili/MT5763-Project-2/tree/master/code/SAS/Fullstimer%20Log))
 The Step Count was reduced from 1246 to 9.  The time lapse was dropped from 12 seconds to 3 seconds.  It could be seen that the improvement was significant. 
 
+### RTF Output
+
+It could be found here (https://github.com/ladychili/MT5763-Project-2/blob/master/code/SAS/output.rtf). 
 
 ## Work attribution
 
