@@ -11,7 +11,7 @@ ultralmBoot <- function(formula, data, B, alpha = 0.05){
   
   # Inputs: formula - formula for regression
   #         data - dataset for regression
-  #         B - the number of bootstrap iterstions
+  #         B - the number of bootstrap iterations
   #         alpha - alpha-level of confidence interval, default 0.05
   
   # Output: A list containing
