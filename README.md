@@ -63,13 +63,10 @@ The improved function is significantly faster than the function in library `boot
 ![boot.benchmark](https://github.com/ladychili/MT5763-Project-2/blob/master/profiling/R.boots.png)
 ![boot.super](https://github.com/ladychili/MT5763-Project-2/blob/master/profiling/profsuper.png)
 
-## Example Analysis
 
-This section is to elucidate how the two functions work and to be implemented and illustrated with an analysis of a simple example with plots and interpretation.  The corresponding data set was uploaded in the repository. 
+### Example Analysis
 
-## R
 
-TBC
 
 ## SAS Bootstrapping
 
