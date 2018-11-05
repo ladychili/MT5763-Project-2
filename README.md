@@ -151,7 +151,7 @@ Statement of Original Work: We confirm that this repository is the work of our t
 
 - Darren O'Reilly __
 
-- Konstantinos Theodosopoulos __
+- Konstantinos Theodosopoulos __ Contribution on SAS bootstrapping macro
 
 - Jonathan Wall __
 
