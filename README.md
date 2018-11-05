@@ -64,9 +64,15 @@ The improved function is significantly faster than the function in library `boot
 ![boot.super](https://github.com/ladychili/MT5763-Project-2/blob/master/profiling/profsuper.png)
 
 
-### Example Analysis
+## Example
 
+Empirical confidence interval of output of *lmBoot.super()*
 
+![CI](https://github.com/ladychili/MT5763-Project-2/blob/master/code/R/output/CItable.png)
+
+Histogram of coefficent estimates of term RunPulse, and the two dashed lines indicates the location of lower and upper confidence interval.
+
+![coefdist](https://github.com/ladychili/MT5763-Project-2/blob/master/code/R/output/Coefdist.png)
 
 ## SAS Bootstrapping
 
