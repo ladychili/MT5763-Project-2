@@ -166,7 +166,12 @@ C. Donovan (2018). MT5763 Project 2 - code collaboration and computer intensive 
 
 Rawlings, J.O., Pantula, S.G., Dickey, D.A.(1998) Applied Regression Analysis: A Research Tool 2nd Edition
 
+R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing,
+  Vienna, Austria. URL <https://www.R-project.org/>.
+  
 RStudio Team (2018). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA URL <http://www.rstudio.com/>.
+
+SAS (2018). Version 9.4. Cary, NC: SAS Institute Inc
 
 SASnrd (2018). Track Performance in SAS with the LOGPARSE Macro. Available at <http://sasnrd.com/sas-logparse-macro/> (Accessed at 2 Nov 2018)
 
